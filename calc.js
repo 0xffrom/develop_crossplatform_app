@@ -11,17 +11,40 @@ function processResetButton() {
 }
 
 function processEqualsButton() {
-    var equation = input.value.replaceAll("x", "*");
+    var inputVal = input.value.replaceAll("x", "*");
 
+    var words = inputVal.split(' ')
 
-    input.value = eval(equation);
+    if (words.length != 3) return;
+
+    var number1 = parseFloat(words[0])
+    var number2 = parseFloat(words[2])
+    var operator = words[1]
+
+    var eval = 0.0
+
+    if (operator == '+') {
+        eval = number1 + number2
+    }
+    if (operator == '-') {
+        eval = number1 - number2
+    }
+    if (operator == '/') {
+        if (number2 == 0) {
+            eval = "Error"
+            blocked = true
+        } else {
+            eval = number1 / number2
+        }
+    }
+    if (operator == '*') {
+        eval = number1 * number2
+    }
+
+    input.value = eval.toString()
 
     if (input.value != equation) {
         lastOperator = false
-    }
-
-    if (input.value.toLowerCase().includes("inf")) {
-        blocked = true
     }
 }
 
