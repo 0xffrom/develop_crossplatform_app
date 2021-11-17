@@ -1,0 +1,55 @@
+html {
+  background-color: #FFFFFF;
+  text-align: center;
+  font: 90% / 1.52 sans-serif;
+  align-items: center;
+}
+
+body {
+  width: 70%;
+  height: 100%;
+  padding: 16px;
+  font: 2rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #fbeaff;
+  color: black;
+}
+
+.header {
+  text-align: center;
+}
+
+.header_title {
+  font-size: 30px
+}
+
+.task_list{
+  text-align: center;
+  align-items: center;
+}
+.card{
+  display: inline-block;
+  max-width: 60%;
+  padding: 16px;
+  height: auto;
+  margin: 16px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  background-color: #82eec3;
+  text-align: center;
+}
+
+.card_title{
+  word-wrap: break-word;
+  font-size: 24px;
+}
+
+.header_input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.header_button {}
